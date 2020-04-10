@@ -460,6 +460,7 @@ header {
             &:nth-child(2) {
                 margin-left: 46px;
                 margin-right: 15px;
+                margin-top: -35px;
             }
             .price_item_block {
                 height: 212px;
@@ -467,12 +468,13 @@ header {
                 color: #ffffff;
                 list-style-type: none;
                 font-weight: bold;
+                position: relative;
+
                 h3 {
                     font-weight: bold;
                     color: #ffffff;
                     font-size: 20px;
-                    padding: 28px 155px;
-                    text-align: center;
+                    padding: 28px 10px;
                 }
                 p {
                     color: #9a9a9a;
@@ -493,22 +495,121 @@ header {
                     }
                 }
                 .flex-price_property {
-                    height: 250px;
+                    height: 293px;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    ul {
-                        li {
-                            color: #9a9a9a;
-                            text-transform: uppercase;
-                            margin: 17px 130px;
-                            background-color: #f5f5f5;
-                            border-bottom: solid 1px #a7a7a7;
-                            font-size: 14px;
+                    margin-top: 24px;
+                    /* &:nth-child(2) {
+                        margin-top: 0px;
+                    } */
+
+                    li {
+                        color: #9a9a9a;
+                        text-transform: uppercase;
+                        padding: 17px 0;
+                        border-bottom: solid 1px #f5f5f5;
+                        font-size: 14px;
+                        text-align: center;
+                        background-color: #ffffff;
+                        &:last-of-type {
+                            border-bottom: none;
                         }
                     }
                 }
             }
         }
     }
+    .popular {
+        background-color: #ff8b38;
+        padding: 10px 0px;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+}
+
+#reviews {
+    height: 600px;
+    h3 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 56px;
+    }
+    .line {
+        width: 66px;
+        border-bottom: 2px solid #ff8b38;
+        margin: 32px auto;
+    }
+    .flex-reviews_block {
+        width: 1100px;
+        display: inline-flex;
+        justify-content: space-around;
+        .reviews_item {
+            height: 130px;
+            width: 276px;
+            border: 3px solid #f5f5f5;
+            position: relative;
+            padding-top: 27px;
+            padding-left: 15px;            
+            background-color: #f5f5f5;
+            span {
+                font-size: 14px;
+                color: #000000;
+                font-style: italic;
+            }
+
+            &:after,
+            &:before {
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                border-color: rgba(255, 255, 255, 0);
+            }
+            &:before {
+                border-top-color:#f5f5f5 !important;
+                margin-left: -122px;
+                border-width: 12px;
+            }
+            &:after {
+                border-top-color:#f5f5f5 !important;
+                margin-left: -119px;
+                border-width: 9px;
+            }
+        }
+    }
+    .flex-people {
+        width: 1100px;
+        display: inline-flex;
+        margin-left: 40px;
+        .person {
+            width: 1100px;
+            display: inline-flex;
+            flex-direction: row;
+           
+            img {
+                margin-top: 14px;
+               float: left;
+            }
+            .person_item {
+                padding: 30px;
+                font-weight: bold;
+                p {
+                    margin-bottom: 0px;
+                }
+                width: 186px;
+            }
+            
+
+
+        }
+    }
+
 }
